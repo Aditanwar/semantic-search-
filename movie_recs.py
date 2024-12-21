@@ -1,7 +1,7 @@
 import pymongo
 import requests
 
-client= pymongo.MongoClient("mongodb+srv://meaditanwar007:VEzv3WlbaMAWSAcs@cluster0.ci2wy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+client= pymongo.MongoClient("mongodb+srv://meaditanwar007:<password>@cluster0.ci2wy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 db= client.sample_mflix
 collection=db.movies
 
@@ -10,8 +10,8 @@ collection=db.movies
 # for item in items:
 #     print(item)
 
-hf_token = "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"
-embedding_url = "https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2"
+hf_token = "<fill as required"
+embedding_url = "<URL>"
 
 def generate_embedding(text: str) -> list[float]:
 
